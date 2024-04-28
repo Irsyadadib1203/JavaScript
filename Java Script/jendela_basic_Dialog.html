@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jendela Basic Dialog</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<body>
+  <button id="open-dialog">Buka Dialog</button>
+
+  <div id="dialog" title="Basic Dialog">
+    <p>Program Ini Adalah Salah Saru Program jendela dialog sederhana dengan menggunakan jQuery UI.</p>
+  </div>
+
+  <script language = "JavaScript">
+    $(document).ready(function() {
+    $("#dialog").dialog({
+      autoOpen: false, 
+      modal: true, 
+      buttons: { 
+        "Tutup": function() {
+          $(this).dialog("close");
+        }
+      }
+    });
+    $("#open-dialog").click(function() {
+      $("#dialog").dialog("open");
+    });
+  });
+  </script>
+</body>
+</html>
